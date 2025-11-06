@@ -1,19 +1,41 @@
-// Animation du logo au chargement
-window.addEventListener('load', () => {
-  const logo = document.querySelector('.logo-central');
-  logo.classList.add('animate');
-});
-
-// Navbar intelligente : disparaît quand on descend, revient quand on remonte
+// === Navbar Hide on Scroll ===
 let lastScroll = 0;
-const navbar = document.getElementById('navbar');
+const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    navbar.style.top = "-80px";
-  } else {
-    navbar.style.top = "0";
+  if (currentScroll <= 0) {
+    navbar.classList.remove('hidden');
+    return;
+  }
+  if (currentScroll > lastScroll && !navbar.classList.contains('hidden')) {
+    navbar.classList.add('hidden');
+  } else if (currentScroll < lastScroll && navbar.classList.contains('hidden')) {
+    navbar.classList.remove('hidden');
   }
   lastScroll = currentScroll;
+});
+
+// === Scroll Reveal ===
+const reveals = document.querySelectorAll('.vision, .gammes, .innovation');
+const revealOnScroll = () => {
+  const windowHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < windowHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// === Smooth Scroll for Internal Links ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
