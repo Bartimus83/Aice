@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AIce – Smart food, smart life. Des produits connectés au service de la santé et du bien-être." />
   <title>AIce – Smart food, smart life</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header id="navbar" class="navbar">
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
     <div class="logo">
-      <img src="favicon.png" alt="Logo AIce">
+      <img src="favicon.png" alt="Logo AIce" />
     </div>
     <nav>
       <ul class="menu">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li class="dropdown">
-          <a href="aicebox.html">AIceBox</a>
+          <a href="aicebox.html">AIceBox ▾</a>
           <ul class="submenu">
             <li><a href="aicebox.html#boreas">Boreas</a></li>
             <li><a href="aicebox.html#sedna">Sedna</a></li>
@@ -29,7 +30,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="aiwave.html">AIWave</a>
+          <a href="aiwave.html">AIWave ▾</a>
           <ul class="submenu">
             <li><a href="aiwave.html#aicehydro">AiceHydro</a></li>
             <li><a href="aiwave.html#aiceconnect">AiceConnect</a></li>
@@ -43,16 +44,63 @@
     </nav>
   </header>
 
-  <!-- Section principale -->
-  <main class="hero">
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <img src="aicebox-produit.png" alt="AIceBox futuriste" class="hero-bg" />
     <div class="hero-overlay"></div>
-    <img class="hero-bg" src="aicebox-produit.png" alt="AIceBox produit">
     <div class="hero-content">
-      <img src="logo-aice.png" alt="Logo AIce" class="logo-central">
+      <img src="logo-aice.png" alt="Logo AIce" class="logo-central" />
       <h1>Smart food, smart life</h1>
       <p>Des produits intelligents au service du bien-être, de la santé et de la planète.</p>
+      <a href="aicebox.html" class="cta">Découvrir nos produits</a>
     </div>
-  </main>
+  </section>
 
+  <!-- ===== VISION ===== -->
+  <section class="vision" id="vision">
+    <div class="vision-content">
+      <h2>Notre vision</h2>
+      <p>
+        AIce révolutionne le quotidien en plaçant l’intelligence au cœur de la nutrition.  
+        Nos produits connectés accompagnent chaque foyer vers une alimentation plus saine, durable et intuitive.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== GAMMES ===== -->
+  <section class="gammes" id="gammes">
+    <h2>Nos gammes</h2>
+    <div class="cards">
+      <a href="aicebox.html" class="card">
+        <img src="aicebox-boreas.png" alt="AIceBox" />
+        <div class="card-info">
+          <h3>AIceBox</h3>
+          <p>Des réfrigérateurs connectés, durables et intelligents.</p>
+        </div>
+      </a>
+      <a href="aiwave.html" class="card">
+        <img src="aicehydrocolors.png" alt="AIWave" />
+        <div class="card-info">
+          <h3>AIWave</h3>
+          <p>Une gamme d’appareils novateurs dédiés à la qualité de vie.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== INNOVATION ===== -->
+  <section class="innovation" id="innovation">
+    <h2>Innovation & Bien-être</h2>
+    <p>
+      Alliant design, technologie et écologie, AIce façonne un futur où chaque foyer devient acteur de sa santé.
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 <a href="#">AIce</a> — Smart food, smart life.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
