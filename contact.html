@@ -8,13 +8,12 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #e7f4fa;
+      background-color: #f4faff;
       color: #1a1a1a;
       margin: 0;
       padding: 0;
     }
 
-    
     header {
       background: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(8px);
@@ -39,65 +38,77 @@
       color: #2d91d8;
     }
 
-    .hero {
+    /* INTRO */
+    .intro {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 70px 20px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
     }
-    .hero h1 {
+    .intro h1 {
       color: #2d91d8;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
+      margin-bottom: 10px;
     }
-    .hero p {
-      max-width: 700px;
-      margin: 10px auto;
+    .intro p {
       color: #333;
       font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    /* ===== IMAGE DE CONTACT ===== */
-    .contact-image-container {
+    /* FICHE CONTACT */
+    .contact-container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 40px auto 20px;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      padding: 40px 10%;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.2s ease forwards;
+      animation-delay: 0.3s;
     }
-    .contact-image-container img {
-      max-width: 450px;
+
+    .contact-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .contact-image img {
+      max-width: 400px;
       width: 90%;
       border-radius: 16px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+    .contact-image img:hover {
+      transform: scale(1.02);
     }
 
-    /* ===== FORMULAIRE ===== */
-    .contact-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    .contact-form {
+      flex: 1 1 400px;
       background: white;
-      margin: 40px auto;
-      padding: 50px 10%;
       border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      max-width: 700px;
+      padding: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 600px;
+    .contact-form h2 {
+      color: #2d91d8;
+      margin-bottom: 20px;
     }
     label {
+      display: block;
       font-weight: 500;
-      margin-top: 20px;
-      color: #1a1a1a;
+      margin-top: 15px;
     }
     input, textarea {
+      width: 100%;
       padding: 12px 14px;
       border: 1.5px solid #cbdfea;
       border-radius: 10px;
-      margin-top: 8px;
+      margin-top: 6px;
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
       background: #f9fbfc;
@@ -111,9 +122,8 @@
       min-height: 120px;
       resize: vertical;
     }
-
     button {
-      margin-top: 30px;
+      margin-top: 25px;
       padding: 14px 30px;
       background: linear-gradient(135deg, #2d91d8, #72c7f5);
       color: white;
@@ -122,18 +132,24 @@
       font-size: 1rem;
       cursor: pointer;
       align-self: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     button:hover {
       transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(45,145,216,0.3);
     }
 
+    /* INFOS */
     .info {
-      margin-top: 40px;
       text-align: center;
       color: #333;
       font-size: 0.95rem;
       line-height: 1.6;
+      margin: 50px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.6s;
     }
 
     footer {
@@ -148,11 +164,23 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
       }
-      .contact-section {
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .contact-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .contact-form {
         padding: 30px 20px;
       }
     }
@@ -172,38 +200,39 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="intro">
     <h1>Contactez-nous</h1>
-    <p>Une question, un partenariat, ou simplement envie d’en savoir plus sur nos produits ?  
-       L’équipe AIce est à votre écoute.</p>
+    <p>Une question, un partenariat ou une demande d’information ?  
+    L’équipe <strong>AIce</strong> est à votre écoute.</p>
   </section>
 
-  <!-- ===== IMAGE ===== -->
-  <section class="contact-image-container">
-    <img src="aice-contact.png" alt="Conseillère AIce devant un réfrigérateur connecté" />
-  </section>
+  <section class="contact-container">
+    <div class="contact-image">
+      <img src="aice-contact.png" alt="Conseillère AIce devant un réfrigérateur connecté">
+    </div>
 
-  <!-- ===== FORMULAIRE ===== -->
-  <section class="contact-section">
-    <form action="#" method="post">
-      <label for="name">Nom complet</label>
-      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <div class="contact-form">
+      <h2>Envoyez-nous un message</h2>
+      <form action="#" method="post">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
 
-      <label for="email">Adresse e-mail</label>
-      <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
 
-      <label for="message">Votre message</label>
-      <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
 
-      <button type="submit">Envoyer le message</button>
-    </form>
-
-    <div class="info">
-      <p>📍 AIce – Paris, France</p>
-      <p>✉️ <a href="mailto:contact@aice.com">contact@aice.com</a></p>
-      <p>📞 +33 1 23 45 67 89</p>
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
   </section>
+
+  <div class="info">
+    <p>📍 AIce – Paris, France</p>
+    <p>✉️ <a href="mailto:contact@aice.com">contact@aice.com</a></p>
+    <p>📞 +33 1 23 45 67 89</p>
+  </div>
 
   <footer>
     © 2025 <a href="index.html">AIce</a> — Smart food, smart life.
