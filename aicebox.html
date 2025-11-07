@@ -3,36 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIceBox – Le réfrigérateur intelligent</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>AIceBox – L’intelligence au cœur du froid</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">AIce</div>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="marque.html">Marque</a></li>
-        <li><a href="aicebox.html" class="active">AIceBox</a></li>
-        <li><a href="aiwave.html">AiWave</a></li>
-        <li><a href="application.html">Application</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+<body style="background-color: #E7F4FA; color:#1a1a1a; font-family:'Poppins', sans-serif;">
+
+  <!-- === NAVIGATION === -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="favicon.svg" alt="Logo AIce" style="height:45px;"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="aicebox.html" class="active">AIceBox</a></li>
+      <li><a href="aiwave.html">AIWave</a></li>
+      <li><a href="application.html">Application</a></li>
+      <li><a href="marque.html">Marque</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- === HERO BANNER === -->
+  <header class="hero-banner" style="
+    position:relative; height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
+    <img src="aicebox-produit.png" alt="AIceBox Hero" 
+         style="position:absolute; width:100%; height:100%; object-fit:cover; filter:blur(6px) brightness(0.6);">
+    <div style="position:relative; z-index:2; color:white;">
+      <h1 style="font-size:2.8rem; font-weight:600; text-shadow:0 2px 8px rgba(0,0,0,0.3);">Gamme AIceBox</h1>
+      <p style="font-size:1.2rem; margin-top:10px;">L’intelligence au cœur du froid</p>
+    </div>
   </header>
 
-  <main class="content">
-    <h1>AIceBox – Le cœur connecté du foyer</h1>
-    <p>Analyse les produits, suggère des recettes et veille sur la santé du foyer.</p>
-    <ul>
-      <li>Détection de péremption et alertes intelligentes</li>
-      <li>Compartiments modulables et vitre tactile personnalisable</li>
-      <li>Intégration avec AIceChef et les assistants vocaux</li>
-    </ul>
-  </main>
+  <!-- === INTRODUCTION === -->
+  <section style="max-width:900px; margin:60px auto; text-align:center;">
+    <p>La gamme <strong>AIceBox</strong> repense la conservation alimentaire en alliant design, performance et intelligence artificielle. Chaque modèle est conçu pour s’adapter aux besoins du foyer moderne, en conciliant durabilité, santé et innovation technologique.</p>
+  </section>
 
-  <footer>
-    <p>© 2025 <a href="http://www.aice.com" target="_blank">AIce</a></p>
+  <!-- === PRODUITS === -->
+
+  <!-- Boreas -->
+  <section class="produit-ligne" style="display:flex; align-items:center; gap:40px; max-width:1100px; margin:60px auto; background:#fff; border-radius:18px; padding:40px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <img src="aicebox-boreas.png" alt="AIceBox Boreas" style="width:350px; border-radius:12px;">
+    <div>
+      <h2 style="color:#2d91d8;">AIceBox Boreas</h2>
+      <p><em>Puissance, efficacité, et éco-responsabilité.</em></p>
+      <p>AIceBox Boreas est le modèle pensé pour allier performance et durabilité. Grâce à son système de refroidissement intelligent et sa gestion automatique de l’énergie, il garantit une conservation optimale tout en réduisant la consommation électrique.</p>
+      <p>Son interface connectée permet de suivre la température en temps réel, de recevoir des alertes et de contrôler l’appareil à distance. Une solution fiable pour les foyers modernes soucieux de performance et d’environnement.</p>
+    </div>
+  </section>
+
+  <!-- Sedna -->
+  <section class="produit-ligne" style="display:flex; align-items:center; flex-direction:row-reverse; gap:40px; max-width:1100px; margin:60px auto; background:#fff; border-radius:18px; padding:40px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <img src="aicebox-sedna.png" alt="AIceBox Sedna" style="width:350px; border-radius:12px;">
+    <div>
+      <h2 style="color:#2d91d8;">AIceBox Sedna</h2>
+      <p><em>Compact, élégant, et économe.</em></p>
+      <p>AIceBox Sedna combine le meilleur du design et de la technologie connectée. Sa forme épurée lui permet de s’intégrer dans tous les intérieurs, tandis que son intelligence embarquée ajuste automatiquement la température en fonction du contenu et de la fréquence d’ouverture.</p>
+      <p>Un concentré d’innovation dans un format pratique, pour une expérience fluide et intuitive au quotidien.</p>
+    </div>
+  </section>
+
+  <!-- Skadi -->
+  <section class="produit-ligne" style="display:flex; align-items:center; gap:40px; max-width:1100px; margin:60px auto; background:#fff; border-radius:18px; padding:40px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <img src="aicebox-skadi.png" alt="AIceBox Skadi" style="width:350px; border-radius:12px;">
+    <div>
+      <h2 style="color:#2d91d8;">AIceBox Skadi</h2>
+      <p><em>Technologie de froid adaptatif.</em></p>
+      <p>AIceBox Skadi est équipée d’un système de refroidissement adaptatif basé sur l’intelligence artificielle. Chaque zone du réfrigérateur analyse la température ambiante et le type d’aliments stockés pour offrir un froid précis et homogène.</p>
+      <p>Grâce à son écran intégré et à sa connectivité, Skadi offre une expérience utilisateur personnalisée, intuitive et respectueuse de l’environnement.</p>
+    </div>
+  </section>
+
+  <!-- Beira -->
+  <section class="produit-ligne" style="display:flex; align-items:center; flex-direction:row-reverse; gap:40px; max-width:1100px; margin:60px auto; background:#fff; border-radius:18px; padding:40px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <img src="aicebox-beira.png" alt="AIceBox Beira" style="width:350px; border-radius:12px;">
+    <div>
+      <h2 style="color:#2d91d8;">AIceBox Beira</h2>
+      <p><em>Connectivité et gestion intelligente des aliments.</em></p>
+      <p>AIceBox Beira va au-delà de la simple conservation. Grâce à sa technologie AIceLink, elle identifie automatiquement les produits stockés et propose des recommandations de recettes, tout en optimisant les dates de consommation.</p>
+      <p>Un partenaire culinaire intelligent au service de la santé et de la réduction du gaspillage alimentaire.</p>
+    </div>
+  </section>
+
+  <!-- Khione -->
+  <section class="produit-ligne" style="display:flex; align-items:center; gap:40px; max-width:1100px; margin:60px auto; background:#fff; border-radius:18px; padding:40px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+    <img src="aicebox-khione.png" alt="AIceBox Khione" style="width:350px; border-radius:12px;">
+    <div>
+      <h2 style="color:#2d91d8;">AIceBox Khione</h2>
+      <p><em>Le froid premium, intelligent et silencieux.</em></p>
+      <p>AIceBox Khione incarne l’excellence du design et de la performance. Son système de refroidissement sans bruit, sa connectivité avancée et sa gestion intelligente de l’humidité en font un réfrigérateur haut de gamme conçu pour les foyers exigeants.</p>
+      <p>Le mariage parfait entre confort, technologie et écologie.</p>
+    </div>
+  </section>
+
+  <!-- === RETOUR ACCUEIL === -->
+  <div style="text-align:center; margin:80px 0;">
+    <a href="index.html" class="cta">← Retour à l’accueil</a>
+  </div>
+
+  <!-- === FOOTER === -->
+  <footer style="text-align:center; background:#1a1a1a; color:white; padding:25px 0; font-size:0.9rem;">
+    © 2025 AIce — Smart food, smart life
   </footer>
+
 </body>
 </html>
