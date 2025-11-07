@@ -3,13 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIceBox – Réfrigérateurs connectés et intelligents</title>
+  <title>Gamme AIceBox – L’intelligence au cœur du froid</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #e7f4fa;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #fff;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #1a1a1a;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .navbar a.active {
+      color: #2d91d8;
+      border-bottom: 2px solid #2d91d8;
+    }
+
+    main {
+      padding: 60px 10%;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h1 {
+      color: #2d91d8;
+      font-size: 2.2em;
+    }
+
+    .produit-ligne {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+      padding: 40px;
+    }
+
+    .produit-ligne:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .produit-ligne img {
+      width: 320px;
+      border-radius: 15px;
+    }
+
+    .texte-produit {
+      flex: 1;
+      margin-left: 40px;
+    }
+
+    .produit-ligne:nth-child(even) .texte-produit {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+
+    h2 {
+      color: #2d91d8;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #2d91d8, #72c7f5);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.3s;
+    }
+
+    .cta:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #72c7f5;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .produit-ligne {
+        flex-direction: column;
+        text-align: center;
+      }
+      .produit-ligne img {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+      .texte-produit {
+        margin: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header class="navbar">
-    <a href="index.html" class="logo"><img src="favicon.svg" alt="Logo AIce" height="48"></a>
+    <a href="index.html" class="logo"><img src="favicon.svg" alt="Logo AIce" height="42"></a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="aicebox.html" class="active">AIceBox</a>
@@ -20,7 +147,7 @@
     </nav>
   </header>
 
-  <main class="produits">
+  <main>
     <section class="intro">
       <h1>Gamme AIceBox</h1>
       <p>Découvrez nos réfrigérateurs intelligents qui allient design, technologie et durabilité. Chaque modèle s’adapte à vos besoins pour un quotidien plus simple et responsable.</p>
@@ -70,7 +197,6 @@
         <a href="aicebox-khione.html" class="cta">Découvrir le modèle</a>
       </div>
     </div>
-
   </main>
 
   <footer>
