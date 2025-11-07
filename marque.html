@@ -8,16 +8,16 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f5fafd;
+      background-color: #f5f9fc;
       color: #1a1a1a;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      padding: 12px 40px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 10px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,101 +25,107 @@
       top: 0;
       z-index: 100;
     }
+
     header img {
       height: 42px;
     }
+
     nav a {
       margin: 0 10px;
       color: #1a1a1a;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover {
       color: #2d91d8;
     }
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px 40px;
-      background: linear-gradient(to bottom, #e6f5fb, #ffffff);
-    }
-    .hero h1 {
-      color: #2d91d8;
-      font-size: 2.5rem;
-    }
-    .hero p {
-      max-width: 800px;
-      margin: 10px auto;
-      color: #333;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* ===== IMAGE MARQUE ===== */
-    .image-marque {
+    .section-mission {
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 40px auto;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 10%;
+      flex-wrap: wrap;
     }
-    .image-marque img {
-      max-width: 90%;
+
+    .section-mission img {
+      width: 40%;
+      max-width: 400px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    /* ===== CONTENU ===== */
-    .contenu {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.8;
+    .mission-texte {
+      flex: 1;
+      min-width: 300px;
     }
 
-    .contenu h2 {
+    .mission-texte h2 {
       color: #2d91d8;
-      font-size: 1.8rem;
-      margin-top: 50px;
-      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
 
-    .contenu p {
+    .mission-texte p {
+      line-height: 1.6;
+      font-size: 1.1rem;
       color: #333;
-      font-size: 1.05rem;
-      text-align: justify;
     }
 
     .valeurs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .valeur {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      padding: 60px 10%;
+      background: #ffffff;
       text-align: center;
     }
-    .valeur span {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 10px;
+
+    .valeurs h2 {
+      color: #2d91d8;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
     }
+
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .valeur {
+      background: #f8fbfd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
     .valeur h3 {
       color: #2d91d8;
       margin-bottom: 10px;
     }
 
-    .charte {
-      text-align: center;
-      margin: 60px 0;
+    .valeur p {
+      font-size: 1rem;
+      color: #333;
     }
-    .charte img {
-      max-width: 80%;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+    .adn {
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .adn h2 {
+      color: #2d91d8;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .adn img {
+      max-width: 600px;
+      width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
     }
 
     footer {
@@ -129,14 +135,25 @@
       padding: 25px;
       font-size: 0.9rem;
     }
+
     footer a {
       color: #72c7f5;
       text-decoration: none;
     }
+
+    @media (max-width: 800px) {
+      .section-mission {
+        flex-direction: column;
+        text-align: center;
+      }
+      .section-mission img {
+        width: 80%;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <a href="index.html"><img src="favicon.svg" alt="Logo AIce" /></a>
     <nav>
@@ -149,57 +166,51 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Notre mission</h1>
-    <p>
-      AIce est née d’une conviction : la technologie peut servir la santé, la durabilité et le bien-être du foyer.  
-      Nous concevons des produits connectés qui allient performance, design et respect de la planète.
-    </p>
-  </section>
-
-  <section class="image-marque">
+  <section class="section-mission">
     <img src="aice-marque.png" alt="Famille dans une cuisine moderne avec le réfrigérateur connecté AIce" />
+    <div class="mission-texte">
+      <h2>Notre mission</h2>
+      <p>
+        AIce est née d’une conviction : la technologie peut servir la santé, la durabilité et le bien-être du foyer.<br><br>
+        Nous concevons des produits connectés qui allient performance, design et respect de la planète.
+      </p>
+    </div>
   </section>
 
-  <section class="contenu">
+  <section class="valeurs">
     <h2>Nos valeurs</h2>
-    <div class="valeurs">
+    <div class="valeurs-grid">
       <div class="valeur">
-        <span>💡</span>
-        <h3>Innovation</h3>
+        <h3>💡 Innovation</h3>
         <p>Placer l’intelligence artificielle au service du quotidien, pour un foyer plus intuitif et efficient.</p>
       </div>
       <div class="valeur">
-        <span>🌿</span>
-        <h3>Durabilité</h3>
+        <h3>🌿 Durabilité</h3>
         <p>Concevoir des produits éco-responsables et recyclables, pensés pour durer.</p>
       </div>
       <div class="valeur">
-        <span>💧</span>
-        <h3>Bien-être</h3>
+        <h3>💧 Bien-être</h3>
         <p>Encourager une alimentation équilibrée et une hydratation saine grâce à des outils intelligents.</p>
       </div>
       <div class="valeur">
-        <span>⚙️</span>
-        <h3>Simplicité</h3>
+        <h3>⚙️ Simplicité</h3>
         <p>Créer des interfaces intuitives et des expériences fluides pour chaque utilisateur.</p>
       </div>
     </div>
+  </section>
 
+  <section class="adn">
     <h2>L’ADN de la marque</h2>
-    <div class="charte">
-      <img src="aice_charte.png" alt="Charte graphique AIce" />
-      <p>🧊 Nom : AIce<br>
-         💬 Slogan : Smart food, smart life<br>
-         🎨 Couleurs : Bleu AIce, Blanc pur, Argent clair<br>
-         🔠 Typographie : Poppins – Semi-Bold<br>
-         🌿 Esprit : High-tech, bienveillance, sobriété</p>
-    </div>
+    <img src="aice_charte.png" alt="Charte graphique AIce" />
+    <p>🧊 Nom : AIce<br>
+    💬 Slogan : Smart food, smart life<br>
+    🎨 Couleurs : Bleu AIce, Blanc pur, Argent clair<br>
+    🔠 Typographie : Poppins – Semi-Bold<br>
+    🌿 Esprit : High-tech, bienveillance, sobriété</p>
   </section>
 
   <footer>
     © 2025 <a href="index.html">AIce</a> — Smart food, smart life.
   </footer>
-
 </body>
 </html>
