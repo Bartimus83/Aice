@@ -5,11 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIceBox Sedna – Élégance et connectivité</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {font-family:'Poppins',sans-serif;background-color:#e7f4fa;color:#1a1a1a;margin:0;padding:0;}
+    header {background:rgba(255,255,255,0.6);backdrop-filter:blur(8px);padding:10px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+    header img{height:42px;}
+    nav a{margin:0 10px;color:#1a1a1a;text-decoration:none;font-weight:500;}
+    nav a:hover{color:#2d91d8;}
+    .hero{position:relative;height:65vh;background:url('aicebox-sedna.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0.3),rgba(231,244,250,0.95));}
+    .hero-content{position:relative;z-index:2;background:rgba(255,255,255,0.75);padding:30px 40px;border-radius:16px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);max-width:700px;}
+    .hero-content h1{color:#2d91d8;margin-bottom:10px;}
+    .fiche-produit{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:50px;background:white;padding:80px 10%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.05);margin:40px auto;max-width:1100px;}
+    .fiche-produit img{width:45%;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    .fiche-texte{flex:1;min-width:300px;}
+    .fiche-texte h2{color:#2d91d8;margin-bottom:15px;}
+    ul{list-style:none;padding-left:0;}
+    ul li::before{content:"• ";color:#2d91d8;font-weight:bold;}
+    .etiquette{background:#f9f9f9;border-radius:12px;padding:20px;margin-top:30px;box-shadow:0 4px 12px rgba(0,0,0,0.05);width:280px;text-align:left;}
+    .etiquette h3{margin-top:0;color:#2d91d8;}
+    .etiquette p{margin:6px 0;font-size:0.95rem;}
+    .prix{font-size:1.3rem;font-weight:600;color:#1a1a1a;margin-top:15px;}
+    .retour{display:inline-block;margin:40px auto;padding:12px 28px;background:linear-gradient(135deg,#2d91d8,#72c7f5);color:white;border-radius:40px;text-decoration:none;}
+    .retour:hover{transform:scale(1.05);}
+    footer{text-align:center;background:#1a1a1a;color:white;padding:25px;font-size:0.9rem;}
+    footer a{color:#72c7f5;text-decoration:none;}
+    @media (max-width:900px){.fiche-produit{flex-direction:column;}.fiche-produit img{width:80%;}.etiquette{width:90%;}}
+  </style>
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="index.html"><img src="favicon.svg" alt="Logo AIce" height="48"></a>
+  <header>
+    <a href="index.html"><img src="favicon.svg" alt="Logo AIce"></a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="aicebox.html" class="active">AIceBox</a>
@@ -20,34 +46,45 @@
     </nav>
   </header>
 
-  <main class="produits">
-    <h1>AIceBox Sedna</h1>
-    <p>Élégant et connecté, Sedna allie design raffiné et technologie intelligente pour un usage fluide et écoresponsable au quotidien.</p>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>AIceBox Sedna</h1>
+      <p>Élégant et connecté, Sedna allie design raffiné et technologie intelligente pour un usage fluide et écoresponsable au quotidien.</p>
+    </div>
+  </section>
 
+  <section class="fiche-produit">
     <img src="aicebox-sedna.png" alt="AIceBox Sedna">
+    <div class="fiche-texte">
+      <h2>Caractéristiques principales</h2>
+      <ul>
+        <li>Capteurs intelligents et régulation automatique</li>
+        <li>Design compact et finition haut de gamme</li>
+        <li>Interface tactile simple et connectée</li>
+        <li>Gestion à distance via l’application AIce</li>
+        <li>Capacité totale : 550 L</li>
+        <li>Niveau sonore : 42 dB</li>
+      </ul>
 
-    <h2>Caractéristiques principales</h2>
-    <ul>
-      <li>Capteurs de gestion automatique des compartiments</li>
-      <li>Interface simplifiée et notifications sur l’app AIce</li>
-      <li>Fonction “EcoSleep” pour réduire la consommation nocturne</li>
-      <li>Capacité totale : 550 L</li>
-      <li>Niveau sonore : 42 dB</li>
-    </ul>
+      <div class="etiquette">
+        <h3>Étiquette énergétique</h3>
+        <p>⚡ Classe : A+</p>
+        <p>🔋 Consommation : 210 kWh/an</p>
+        <p>📦 Volume total : 550 L</p>
+        <p>🔈 Niveau sonore : 42 dB</p>
+      </div>
 
-    <h3>Étiquette énergétique</h3>
-    <p>⚡ Classe : A+<br>
-    🔋 Consommation : 210 kWh/an<br>
-    📦 Volume total : 550 L<br>
-    🔈 Niveau sonore : 42 dB</p>
+      <p class="prix">💰 Prix : 1 999 €</p>
+    </div>
+  </section>
 
-    <p><strong>💰 Prix : 1 999 €</strong></p>
-
-    <a href="aicebox.html">← Retour à la gamme AIceBox</a>
-  </main>
+  <div style="text-align:center;">
+    <a class="retour" href="aicebox.html">← Retour à la gamme AIceBox</a>
+  </div>
 
   <footer>
-    <p>© 2025 <a href="index.html">AIce</a> — Smart food, smart life.</p>
+    © 2025 <a href="index.html">AIce</a> — Smart food, smart life.
   </footer>
 
 </body>
