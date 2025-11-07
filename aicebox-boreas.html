@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIceBox Boreas – Le froid intelligent et sur mesure</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e7f4fa;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header img {
+      height: 42px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #2d91d8;
+    }
+
+    .hero {
+      position: relative;
+      height: 65vh;
+      background: url('aicebox-boreas.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(231,244,250,0.95));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.75);
+      padding: 30px 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+    .hero-content h1 {
+      color: #2d91d8;
+      margin-bottom: 10px;
+    }
+
+    .fiche-produit {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      background: white;
+      padding: 80px 10%;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin: 40px auto;
+      max-width: 1100px;
+    }
+
+    .fiche-produit img {
+      width: 45%;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .fiche-texte {
+      flex: 1;
+      min-width: 300px;
+    }
+    .fiche-texte h2 {
+      color: #2d91d8;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "• ";
+      color: #2d91d8;
+      font-weight: bold;
+    }
+
+    .etiquette {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      width: 280px;
+      text-align: left;
+    }
+    .etiquette h3 {
+      margin-top: 0;
+      color: #2d91d8;
+    }
+    .etiquette p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .prix {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 15px;
+    }
+
+    .retour {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #2d91d8, #72c7f5);
+      color: white;
+      border-radius: 40px;
+      text-decoration: none;
+    }
+    .retour:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background: #1a1a1a;
+      color: white;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #72c7f5;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .fiche-produit {
+        flex-direction: column;
+      }
+      .fiche-produit img {
+        width: 80%;
+      }
+      .etiquette {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="favicon.svg" alt="Logo AIce"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="aicebox.html" class="active">AIceBox</a>
+      <a href="aiwave.html">AIWave</a>
+      <a href="application.html">Application</a>
+      <a href="marque.html">Marque</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>AIceBox Boreas</h1>
+      <p>Le réfrigérateur intelligent, durable et personnalisable pour une gestion connectée de vos aliments.</p>
+    </div>
+  </section>
+
+  <section class="fiche-produit">
+    <img src="aicebox-boreas.png" alt="AIceBox Boreas">
+    <div class="fiche-texte">
+      <h2>Caractéristiques principales</h2>
+      <ul>
+        <li>Écran tactile HD et interface intelligente</li>
+        <li>Inventaire automatique avec reconnaissance visuelle</li>
+        <li>Régulation de température multi-zones</li>
+        <li>Connectivité totale via l’application AIce</li>
+        <li>Optimisation énergétique et mode éco</li>
+        <li>Capacité totale : 700 L</li>
+        <li>Niveau sonore : 45 dB</li>
+      </ul>
+
+      <div class="etiquette">
+        <h3>Étiquette énergétique</h3>
+        <p>⚡ Classe : A</p>
+        <p>🔋 Consommation : 280 kWh/an</p>
+        <p>📦 Volume total : 700 L</p>
+        <p>🔈 Niveau sonore : 45 dB</p>
+      </div>
+
+      <p class="prix">💰 Prix : 2 499 €</p>
+    </div>
+  </section>
+
+  <div style="text-align:center;">
+    <a class="retour" href="aicebox.html">← Retour à la gamme AIceBox</a>
+  </div>
+
+  <footer>
+    © 2025 <a href="index.html">AIce</a> — Smart food, smart life.
+  </footer>
+
+</body>
+</html>
