@@ -6,108 +6,23 @@
   <title>AIceHydro – L’eau réinventée</title>
   <link rel="stylesheet" href="style.css">
   <style>
-  /* ===== PAGE AICEHYDRO ===== */
-  .hero-hydro {
-    position: relative;
-    height: 70vh;
-    background: url('aicehydrocolors.png') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-hydro::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-hydro .overlay {
-    position: relative;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px 60px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 700px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-hydro h1 {
-    font-size: 2.5rem;
-    color: #2d91d8;
-    margin-bottom: 10px;
-  }
-
-  .hero-hydro p {
-    color: #222;
-    margin: 8px 0;
-    font-size: 1.1rem;
-  }
-
-  /* Bloc blanc principal */
-  .hydro-contenu {
-    background: #f3faff;
-    padding: 60px 8%;
-    text-align: center;
-  }
-
-  .hydro-contenu h2 {
-    color: #2d91d8;
-    margin-bottom: 20px;
-  }
-
-  .hydro-contenu p {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-  }
-
-  /* Atouts */
-  .atouts {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
-  }
-
-  .atout {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    width: 260px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  }
-
-  .atout strong {
-    color: #2d91d8;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .prix {
-    font-size: 1.6rem;
-    color: #2d91d8;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-
+  /* ===== AJUSTEMENTS SPÉCIFIQUES AICEHYDRO ===== */
   .produit-image {
+    display: block;
+    margin: 40px auto 50px auto; /* espace au-dessus et en dessous */
     width: 220px;
     border-radius: 12px;
-    margin-bottom: 40px;
   }
 
   .retour {
     display: inline-block;
+    margin-bottom: 50px;
     padding: 12px 24px;
     background: #2d91d8;
     color: white;
     border-radius: 40px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
   }
 
   .retour:hover {
@@ -129,7 +44,6 @@
     </nav>
   </header>
 
-  <!-- Image floutée de fond -->
   <section class="hero-hydro">
     <div class="overlay">
       <h1>AIceHydro</h1>
@@ -138,7 +52,6 @@
     </div>
   </section>
 
-  <!-- Bloc blanc en dessous -->
   <main class="hydro-contenu">
     <section class="description">
       <h2>Une hydratation pure et connectée</h2>
@@ -163,6 +76,8 @@
     </div>
 
     <h3 class="prix">Prix : 199 €</h3>
+
+    <!-- ✅ IMAGE CENTRÉE ET ÉSPACÉE -->
     <img src="aicehydroblack.png" alt="AIceHydro" class="produit-image">
 
     <a href="aiwave.html" class="retour">← Retour à la gamme AIWave</a>
