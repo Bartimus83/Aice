@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AIce – Smart food, smart life. Des produits connectés au service de la santé et du bien-être." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIce – Smart food, smart life</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
     <div class="logo">
-      <img src="favicon.png" alt="Logo AIce" />
+      <img src="logo-aice.svg" alt="Logo AIce">
     </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li class="dropdown">
-          <a href="aicebox.html">AIceBox ▾</a>
-          <ul class="submenu">
-            <li><a href="aicebox.html#boreas">Boreas</a></li>
-            <li><a href="aicebox.html#sedna">Sedna</a></li>
-            <li><a href="aicebox.html#skadi">Skadi</a></li>
-            <li><a href="aicebox.html#beira">Beira</a></li>
-            <li><a href="aicebox.html#khione">Khione</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="aiwave.html">AIWave ▾</a>
-          <ul class="submenu">
-            <li><a href="aiwave.html#aicehydro">AiceHydro</a></li>
-            <li><a href="aiwave.html#aiceconnect">AiceConnect</a></li>
-            <li><a href="aiwave.html#aicefreeze">AiceFreeze</a></li>
-          </ul>
-        </li>
-        <li><a href="application.html">Application</a></li>
-        <li><a href="marque.html">Marque</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <ul class="menu">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li class="dropdown">
+        <a href="aicebox.html">AIceBox ▾</a>
+        <ul class="submenu">
+          <li><a href="aicebox.html#boreas">Boreas</a></li>
+          <li><a href="aicebox.html#sedna">Sedna</a></li>
+          <li><a href="aicebox.html#skadi">Skadi</a></li>
+          <li><a href="aicebox.html#beira">Beira</a></li>
+          <li><a href="aicebox.html#khione">Khione</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="aiwave.html">AIWave ▾</a>
+        <ul class="submenu">
+          <li><a href="aiwave.html#aicehydro">AiceHydro</a></li>
+          <li><a href="aiwave.html#aiceconnect">AiceConnect</a></li>
+          <li><a href="aiwave.html#aicefreeze">AiceFreeze</a></li>
+        </ul>
+      </li>
+      <li><a href="application.html">Application</a></li>
+      <li><a href="marque.html">Marque</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <img src="aicebox-produit.png" alt="AIceBox futuriste" class="hero-bg" />
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img src="aicebox-produit.png" alt="AIceBox futuriste" class="hero-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="logo-aice.png" alt="Logo AIce" class="logo-central" />
+      <img src="favicon.svg" alt="Symbole AIce" class="logo-central">
       <h1>Smart food, smart life</h1>
       <p>Des produits intelligents au service du bien-être, de la santé et de la planète.</p>
       <a href="aicebox.html" class="cta">Découvrir nos produits</a>
     </div>
-  </section>
+  </header>
 
   <!-- ===== VISION ===== -->
-  <section class="vision" id="vision">
-    <div class="vision-content">
-      <h2>Notre vision</h2>
-      <p>
-        AIce révolutionne le quotidien en plaçant l’intelligence au cœur de la nutrition.  
-        Nos produits connectés accompagnent chaque foyer vers une alimentation plus saine, durable et intuitive.
-      </p>
-    </div>
+  <section class="vision">
+    <h2>Notre vision</h2>
+    <p>AIce révolutionne le quotidien en plaçant l’intelligence au cœur de la nutrition.<br>
+    Nos produits connectés accompagnent chaque foyer vers une alimentation plus saine, durable et intuitive.</p>
   </section>
 
   <!-- ===== GAMMES ===== -->
-  <section class="gammes" id="gammes">
+  <section class="gammes">
     <h2>Nos gammes</h2>
     <div class="cards">
       <a href="aicebox.html" class="card">
-        <img src="aicebox-boreas.png" alt="AIceBox" />
+        <img src="aicebox-boreas.png" alt="AIceBox">
         <div class="card-info">
           <h3>AIceBox</h3>
           <p>Des réfrigérateurs connectés, durables et intelligents.</p>
         </div>
       </a>
+
       <a href="aiwave.html" class="card">
-        <img src="aicehydrocolors.png" alt="AIWave" />
+        <img src="aicehydrocolors.png" alt="AIWave">
         <div class="card-info">
           <h3>AIWave</h3>
           <p>Une gamme d’appareils novateurs dédiés à la qualité de vie.</p>
@@ -89,18 +85,15 @@
   </section>
 
   <!-- ===== INNOVATION ===== -->
-  <section class="innovation" id="innovation">
+  <section class="innovation">
     <h2>Innovation & Bien-être</h2>
-    <p>
-      Alliant design, technologie et écologie, AIce façonne un futur où chaque foyer devient acteur de sa santé.
-    </p>
+    <p>Alliant design, technologie et écologie, AIce façonne un futur où chaque foyer devient acteur de sa santé.</p>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2025 <a href="#">AIce</a> — Smart food, smart life.</p>
+    © 2025 AIce — Smart food, smart life
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
