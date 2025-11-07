@@ -6,112 +6,171 @@
   <title>AIceHydro – L’eau réinventée</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('aicehydrocolors.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #1a1a1a;
-    }
+  /* ===== PAGE AICEHYDRO ===== */
+  .hero-hydro {
+    position: relative;
+    height: 70vh;
+    background: url('aicehydrocolors.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .overlay {
-      background: rgba(231, 244, 250, 0.85);
-      min-height: 100vh;
-      padding: 100px 0;
-    }
+  .hero-hydro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+  }
 
-    .container {
-      background: white;
-      max-width: 900px;
-      margin: auto;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      padding: 60px 50px;
-      text-align: center;
-    }
+  .hero-hydro .overlay {
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 60px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
 
-    h1 {
-      color: #2d91d8;
-      font-size: 2.6rem;
-      margin-bottom: 10px;
-    }
+  .hero-hydro h1 {
+    font-size: 2.5rem;
+    color: #2d91d8;
+    margin-bottom: 10px;
+  }
 
-    h2 {
-      color: #2d91d8;
-      margin-top: 40px;
-    }
+  .hero-hydro p {
+    color: #222;
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
 
-    p {
-      line-height: 1.6;
-      margin: 12px 0;
-    }
+  /* Bloc blanc principal */
+  .hydro-contenu {
+    background: #f3faff;
+    padding: 60px 8%;
+    text-align: center;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
+  .hydro-contenu h2 {
+    color: #2d91d8;
+    margin-bottom: 20px;
+  }
 
-    li {
-      margin: 8px 0;
-    }
+  .hydro-contenu p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
 
-    .cta {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 30px;
-      background: linear-gradient(135deg, #2d91d8, #72c7f5);
-      color: white;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: transform 0.3s ease;
-    }
+  /* Atouts */
+  .atouts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
 
-    .cta:hover {
-      transform: scale(1.05);
-    }
+  .atout {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
 
-    footer {
-      text-align: center;
-      color: #555;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
+  .atout strong {
+    color: #2d91d8;
+    display: block;
+    margin-bottom: 10px;
+  }
 
-    footer a {
-      color: #2d91d8;
-      text-decoration: none;
-    }
+  .prix {
+    font-size: 1.6rem;
+    color: #2d91d8;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .produit-image {
+    width: 220px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+
+  .retour {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2d91d8;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .retour:hover {
+    background: #72c7f5;
+  }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
+
+  <header class="navbar">
+    <a href="index.html" class="logo"><img src="favicon.svg" alt="Logo AIce" height="48"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="aicebox.html">AIceBox</a>
+      <a href="aiwave.html" class="active">AIWave</a>
+      <a href="application.html">Application</a>
+      <a href="marque.html">Marque</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Image floutée de fond -->
+  <section class="hero-hydro">
+    <div class="overlay">
       <h1>AIceHydro</h1>
       <p>La carafe connectée et purificatrice d’eau qui veille sur votre santé et votre consommation.</p>
-      <p><strong>Une hydratation intelligente au service du bien-être et de la planète.</strong></p>
-
-      <h2>Une hydratation pure et connectée</h2>
-      <p>
-        AIceHydro révolutionne l’hydratation domestique grâce à son système de filtration triple action.<br>
-        Ses capteurs intelligents mesurent en temps réel la qualité de l’eau, sa température et vos apports quotidiens.<br>
-        Reliée à l’application AIce, elle vous accompagne vers un mode de vie plus sain et durable.
-      </p>
-
-      <ul>
-        <li>💧 <strong>Filtration intelligente</strong> — Élimine 99,9 % des impuretés et ajuste le filtrage selon la qualité de l’eau.</li>
-        <li>📱 <strong>Connectivité AIce</strong> — Synchronisation en temps réel avec votre profil AIce pour un suivi personnalisé.</li>
-        <li>♻️ <strong>Design éco-responsable</strong> — Matériaux recyclables, recharge USB-C et conception durable optimisée.</li>
-      </ul>
-
-      <p><strong>Prix : 199 €</strong></p>
-      <a href="aiwave.html" class="cta">← Découvrir la gamme AIWave</a>
+      <p>Une hydratation intelligente au service du bien-être et de la planète.</p>
     </div>
-  </div>
+  </section>
+
+  <!-- Bloc blanc en dessous -->
+  <main class="hydro-contenu">
+    <section class="description">
+      <h2>Une hydratation pure et connectée</h2>
+      <p>AIceHydro révolutionne l’hydratation domestique grâce à son système de filtration triple action.
+      Ses capteurs intelligents mesurent en temps réel la qualité de l’eau, sa température et vos apports quotidiens.
+      Reliée à l’application AIce, elle vous accompagne vers un mode de vie plus sain et durable.</p>
+    </section>
+
+    <div class="atouts">
+      <div class="atout">
+        💧 <strong>Filtration intelligente</strong>
+        <p>Élimine 99,9 % des impuretés et ajuste le filtrage selon la qualité de l’eau.</p>
+      </div>
+      <div class="atout">
+        📱 <strong>Connectivité AIce</strong>
+        <p>Synchronisation en temps réel avec votre profil AIce pour un suivi personnalisé.</p>
+      </div>
+      <div class="atout">
+        ♻️ <strong>Design éco-responsable</strong>
+        <p>Matériaux recyclables, recharge USB-C et conception durable optimisée.</p>
+      </div>
+    </div>
+
+    <h3 class="prix">Prix : 199 €</h3>
+    <img src="aicehydroblack.png" alt="AIceHydro" class="produit-image">
+
+    <a href="aiwave.html" class="retour">← Retour à la gamme AIWave</a>
+  </main>
 
   <footer>
-    © 2025 <a href="index.html">AIce</a> — Smart food, smart life.
+    <p>© 2025 <a href="index.html">AIce</a> — Smart food, smart life.</p>
   </footer>
+
 </body>
 </html>
