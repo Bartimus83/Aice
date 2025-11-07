@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f4faff;
+      background: linear-gradient(180deg, #f4faff 0%, #e9f6fc 100%);
       color: #1a1a1a;
       margin: 0;
       padding: 0;
@@ -38,7 +38,7 @@
       color: #2d91d8;
     }
 
-    /* INTRO */
+    /* SECTION INTRO */
     .intro {
       text-align: center;
       padding: 70px 20px 20px;
@@ -58,7 +58,7 @@
       margin: 0 auto;
     }
 
-    /* FICHE CONTACT */
+    /* CONTAINER PRINCIPAL */
     .contact-container {
       display: flex;
       align-items: center;
@@ -87,35 +87,47 @@
       transform: scale(1.02);
     }
 
+    /* FORMULAIRE - effet verre givré */
     .contact-form {
       flex: 1 1 400px;
-      background: white;
-      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
       padding: 40px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-form:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
     }
     .contact-form h2 {
       color: #2d91d8;
       margin-bottom: 20px;
+      text-align: center;
     }
+
     label {
       display: block;
       font-weight: 500;
       margin-top: 15px;
+      color: #1a1a1a;
     }
     input, textarea {
       width: 100%;
       padding: 12px 14px;
-      border: 1.5px solid #cbdfea;
+      border: 1.5px solid rgba(255,255,255,0.5);
       border-radius: 10px;
       margin-top: 6px;
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
-      background: #f9fbfc;
-      transition: border-color 0.3s ease;
+      background: rgba(255,255,255,0.8);
+      transition: border-color 0.3s ease, background 0.3s ease;
     }
     input:focus, textarea:focus {
       border-color: #2d91d8;
+      background: rgba(255,255,255,1);
       outline: none;
     }
     textarea {
@@ -133,13 +145,16 @@
       cursor: pointer;
       align-self: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     button:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 10px rgba(45,145,216,0.3);
     }
 
-    /* INFOS */
+    /* INFOS CONTACT */
     .info {
       text-align: center;
       color: #333;
