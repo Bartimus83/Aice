@@ -5,6 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIceHydro – L’eau réinventée</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* === SECTION HERO AVEC IMAGE FL OUTÉE === */
+    .hero-hydro {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero-hydro img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(3px) brightness(0.8);
+      transform: scale(1.05);
+      z-index: 1;
+    }
+
+    .hero-hydro .overlay {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.75);
+      color: #1a1a1a;
+      padding: 40px 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* === CONTENU PRINCIPAL === */
+    .produit-page {
+      background: white;
+      text-align: center;
+      padding: 80px 10%;
+    }
+
+    .presentation {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .presentation img {
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .presentation .texte {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .presentation ul {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .presentation li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .prix {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #2d91d8;
+      font-weight: bold;
+    }
+
+    .energie img {
+      display: block;
+      margin: 60px auto 40px auto;
+      width: 200px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-bottom: 60px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #2d91d8, #72c7f5);
+      color: white;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f7f9fb;
+      color: #333;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,23 +129,25 @@
     </nav>
   </header>
 
-  <main class="produit-page">
-    <section class="intro">
+  <!-- ✅ IMAGE COLORÉE EN HAUT AVEC EFFET FL OUT -->
+  <section class="hero-hydro">
+    <img src="aicehydrocolors.png" alt="AIceHydro coloré en fond">
+    <div class="overlay">
       <h1>AIceHydro</h1>
-      <p>La carafe connectée et purificatrice d’eau qui veille sur votre santé et votre consommation.<br>
-      Une hydratation intelligente au service du bien-être et de la planète.</p>
-    </section>
+      <p>La carafe connectée et purificatrice d’eau qui veille sur votre santé et votre consommation.</p>
+      <p>Une hydratation intelligente au service du bien-être et de la planète.</p>
+    </div>
+  </section>
 
+  <!-- ✅ CONTENU PRINCIPAL EN FOND BLANC -->
+  <main class="produit-page">
     <section class="presentation">
-      <img src="aicehydrocolors.png" alt="AIceHydro coloré" class="produit-image">
+      <img src="aicehydrocolors.png" alt="AIceHydro">
       <div class="texte">
         <h2>Une hydratation pure et connectée</h2>
-        <p>
-          AIceHydro redéfinit la façon dont nous consommons l’eau.  
-          Grâce à son système de filtration triple action et à ses capteurs intégrés, 
-          elle mesure en temps réel la qualité de l’eau, sa température et votre consommation quotidienne.  
-          Reliée à l’application AIce, elle vous accompagne dans vos objectifs d’hydratation et contribue à un mode de vie plus sain et durable.
-        </p>
+        <p>AIceHydro redéfinit la façon dont nous consommons l’eau.  
+        Grâce à son système de filtration triple action et à ses capteurs intégrés, elle mesure en temps réel la qualité de l’eau, sa température et votre consommation quotidienne.  
+        Reliée à l’application AIce, elle vous accompagne dans vos objectifs d’hydratation et contribue à un mode de vie plus sain et durable.</p>
 
         <ul>
           <li>💧 <strong>Filtration intelligente :</strong> Élimine 99,9 % des impuretés et adapte le filtrage selon la qualité de votre eau.</li>
@@ -44,7 +155,7 @@
           <li>♻️ <strong>Design éco-responsable :</strong> Conception en matériaux recyclables, rechargeable via USB-C, et durablement optimisée.</li>
         </ul>
 
-        <p class="prix"><strong>Prix :</strong> 199 €</p>
+        <p class="prix">Prix : 199 €</p>
       </div>
     </section>
 
@@ -52,9 +163,7 @@
       <img src="aicehydroblack.png" alt="Étiquette énergétique AIceHydro">
     </section>
 
-    <div class="retour">
-      <a href="aiwave.html" class="cta">← Retour à la gamme AIWave</a>
-    </div>
+    <a href="aiwave.html" class="cta">← Retour à la gamme AIWave</a>
   </main>
 
   <footer>
