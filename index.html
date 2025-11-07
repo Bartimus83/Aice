@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIce – Smart food, smart life</title>
-
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar">
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
     <div class="logo">
-      <img src="logo-aice.svg" alt="Logo AIce">
+      <a href="index.html">
+        <img src="favicon.svg" alt="Symbole AIce" />
+      </a>
     </div>
-    <ul class="menu">
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li class="dropdown">
+    <nav class="menu">
+      <a href="index.html" class="active">Accueil</a>
+      <div class="dropdown">
         <a href="aicebox.html">AIceBox ▾</a>
         <ul class="submenu">
           <li><a href="aicebox.html#boreas">Boreas</a></li>
@@ -28,38 +29,39 @@
           <li><a href="aicebox.html#beira">Beira</a></li>
           <li><a href="aicebox.html#khione">Khione</a></li>
         </ul>
-      </li>
-      <li class="dropdown">
+      </div>
+      <div class="dropdown">
         <a href="aiwave.html">AIWave ▾</a>
         <ul class="submenu">
           <li><a href="aiwave.html#aicehydro">AiceHydro</a></li>
           <li><a href="aiwave.html#aiceconnect">AiceConnect</a></li>
           <li><a href="aiwave.html#aicefreeze">AiceFreeze</a></li>
         </ul>
-      </li>
-      <li><a href="application.html">Application</a></li>
-      <li><a href="marque.html">Marque</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+      </div>
+      <a href="application.html">Application</a>
+      <a href="marque.html">Marque</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <header class="hero">
-    <img src="aicebox-produit.png" alt="AIceBox futuriste" class="hero-bg">
-    <div class="hero-overlay"></div>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
     <div class="hero-content">
-      <img src="favicon.svg" alt="Symbole AIce" class="logo-central">
+      <img src="logo-aice.svg" alt="Logo complet AIce" class="logo-central" />
       <h1>Smart food, smart life</h1>
       <p>Des produits intelligents au service du bien-être, de la santé et de la planète.</p>
       <a href="aicebox.html" class="cta">Découvrir nos produits</a>
     </div>
-  </header>
+  </section>
 
   <!-- ===== VISION ===== -->
   <section class="vision">
     <h2>Notre vision</h2>
-    <p>AIce révolutionne le quotidien en plaçant l’intelligence au cœur de la nutrition.<br>
-    Nos produits connectés accompagnent chaque foyer vers une alimentation plus saine, durable et intuitive.</p>
+    <p>
+      AIce révolutionne le quotidien en plaçant l’intelligence au cœur de la nutrition.
+      Nos produits connectés accompagnent chaque foyer vers une alimentation plus saine,
+      durable et intuitive.
+    </p>
   </section>
 
   <!-- ===== GAMMES ===== -->
@@ -67,7 +69,7 @@
     <h2>Nos gammes</h2>
     <div class="cards">
       <a href="aicebox.html" class="card">
-        <img src="aicebox-boreas.png" alt="AIceBox">
+        <img src="aicebox-boreas.png" alt="AIceBox" />
         <div class="card-info">
           <h3>AIceBox</h3>
           <p>Des réfrigérateurs connectés, durables et intelligents.</p>
@@ -75,7 +77,7 @@
       </a>
 
       <a href="aiwave.html" class="card">
-        <img src="aicehydrocolors.png" alt="AIWave">
+        <img src="aicehydrocolors.png" alt="AIWave" />
         <div class="card-info">
           <h3>AIWave</h3>
           <p>Une gamme d’appareils novateurs dédiés à la qualité de vie.</p>
@@ -87,7 +89,9 @@
   <!-- ===== INNOVATION ===== -->
   <section class="innovation">
     <h2>Innovation & Bien-être</h2>
-    <p>Alliant design, technologie et écologie, AIce façonne un futur où chaque foyer devient acteur de sa santé.</p>
+    <p>
+      Alliant design, technologie et écologie, AIce façonne un futur où chaque foyer devient acteur de sa santé.
+    </p>
   </section>
 
   <!-- ===== FOOTER ===== -->
