@@ -5,6 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIceBox Skadi – Précision et froid adaptatif</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e7f4fa;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header img {
+      height: 42px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #2d91d8;
+    }
+
+    .hero {
+      position: relative;
+      height: 65vh;
+      background: url('aicebox-skadi.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(231,244,250,0.95));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.75);
+      padding: 30px 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+    .hero-content h1 {
+      color: #2d91d8;
+      margin-bottom: 10px;
+    }
+
+    .fiche-produit {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      background: white;
+      padding: 80px 10%;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      margin: 40px auto;
+      max-width: 1100px;
+    }
+
+    .fiche-produit img {
+      width: 45%;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .fiche-texte {
+      flex: 1;
+      min-width: 300px;
+    }
+    .fiche-texte h2 {
+      color: #2d91d8;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "• ";
+      color: #2d91d8;
+      font-weight: bold;
+    }
+
+    .etiquette {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      width: 280px;
+      text-align: left;
+    }
+    .etiquette h3 {
+      margin-top: 0;
+      color: #2d91d8;
+    }
+    .etiquette p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .prix {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 15px;
+    }
+
+    .retour {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #2d91d8, #72c7f5);
+      color: white;
+      border-radius: 40px;
+      text-decoration: none;
+    }
+    .retour:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background: #1a1a1a;
+      color: white;
+      padding: 25px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #72c7f5;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .fiche-produit {
+        flex-direction: column;
+      }
+      .fiche-produit img {
+        width: 80%;
+      }
+      .etiquette {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,11 +181,11 @@
     </nav>
   </header>
 
-  <section class="hero" style="background:url('aicebox-skadi.png') center/cover no-repeat;">
+  <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>AIceBox Skadi</h1>
-      <p>Froid adaptatif et précision connectée : Skadi ajuste la température selon vos aliments pour un confort optimal.</p>
+      <p>Le réfrigérateur à froid adaptatif qui ajuste la température au degré près pour préserver chaque aliment.</p>
     </div>
   </section>
 
@@ -33,12 +194,12 @@
     <div class="fiche-texte">
       <h2>Caractéristiques principales</h2>
       <ul>
-        <li>Technologie de refroidissement adaptatif</li>
-        <li>Contrôle précis par capteurs internes</li>
-        <li>Régulation automatique multi-niveaux</li>
-        <li>Application AIce pour la gestion à distance</li>
-        <li>Mode silence intégré</li>
-        <li>Capacité totale : 600 L</li>
+        <li>Écran LED discret avec interface intuitive</li>
+        <li>Régulation de température adaptative par type d’aliments</li>
+        <li>Mode fraîcheur prolongée pour fruits et légumes</li>
+        <li>Connectivité via l’application AIce pour ajuster le froid à distance</li>
+        <li>Optimisation énergétique automatique selon le niveau de remplissage</li>
+        <li>Capacité totale : 520 L</li>
         <li>Niveau sonore : 40 dB</li>
       </ul>
 
@@ -46,11 +207,11 @@
         <h3>Étiquette énergétique</h3>
         <p>⚡ Classe : A+</p>
         <p>🔋 Consommation : 230 kWh/an</p>
-        <p>📦 Volume total : 600 L</p>
+        <p>📦 Volume total : 520 L</p>
         <p>🔈 Niveau sonore : 40 dB</p>
       </div>
 
-      <p class="prix">💰 Prix : 2 199 €</p>
+      <p class="prix">💰 Prix : 1 899 €</p>
     </div>
   </section>
 
