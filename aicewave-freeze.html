@@ -5,6 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIceFreeze – Le froid intelligent et durable</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Effet visuel du bandeau d'image --- */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('aicefreeze.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #1a1a1a;
+    }
+
+    /* Dégradé doux blanc -> transparent pour lisibilité */
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 220px;
+      background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+    /* Contenu texte au-dessus du dégradé */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(4px);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      color: #2d91d8;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,28 +68,28 @@
   </header>
 
   <main>
-    <!-- SECTION HERO -->
-    <section class="hero" style="background: url('aicefreeze.png') center/cover no-repeat; filter: brightness(0.9); height: 80vh; display: flex; align-items: center; justify-content: center;">
-      <div style="background-color: rgba(255,255,255,0.85); padding: 40px 60px; border-radius: 20px; text-align: center;">
-        <h1 style="color: #2d91d8;">AIceFreeze</h1>
+    <!-- HERO SECTION avec image + dégradé -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>AIceFreeze</h1>
         <p>La technologie de surgélation intelligente au service de vos aliments.<br>
         Préservez la fraîcheur, le goût et les nutriments tout en économisant de l’énergie.</p>
       </div>
     </section>
 
-    <!-- SECTION CONTENU -->
-    <section style="background: #f3faff; padding: 60px 10%; text-align: center;">
-      <h2>Le froid de demain, aujourd’hui</h2>
-      <p>AIceFreeze combine performance et écologie.  
+    <!-- SECTION DÉTAILS PRODUIT -->
+    <section style="background: #f3faff; padding: 80px 10%; text-align: center;">
+      <h2 style="color:#2d91d8;">Le froid de demain, aujourd’hui</h2>
+      <p style="max-width:800px; margin:20px auto;">AIceFreeze combine performance et écologie.<br>
       Grâce à son système de refroidissement adaptatif, il ajuste la température selon le type d’aliments et réduit la consommation énergétique.</p>
 
       <p>❄️ <strong>Surgélation rapide</strong> – Préserve les nutriments et la texture des aliments grâce à une descente en température ultra-rapide.</p>
       <p>⚡ <strong>Éco-performance</strong> – Réduction automatique de la consommation selon la charge du congélateur.</p>
       <p>📱 <strong>Connectivité AIce</strong> – Contrôle à distance et alertes intelligentes via l’application AIce.</p>
 
-      <p><strong>Prix : 249 €</strong></p>
+      <p style="margin-top:30px; font-size:1.2rem;"><strong>Prix : 249 €</strong></p>
 
-      <img src="aicefreeze.png" alt="AIceFreeze" style="width: 350px; border-radius: 16px; margin: 30px auto; display: block;">
+      <img src="aicefreeze.png" alt="AIceFreeze" style="width:350px; border-radius:16px; margin:40px auto; display:block;">
 
       <a href="aiwave.html" style="display:inline-block; margin-top:20px; text-decoration:none; color:#2d91d8; font-weight:600;">← Retour à la gamme AIWave</a>
     </section>
