@@ -39,32 +39,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-// POPUP MARKETING
-window.addEventListener("load", () => {
-    const popup = document.getElementById("popup-container");
-    const closeBtn = document.getElementById("popup-close");
-    const form = document.getElementById("popup-form");
-    
-    // Affichage 1,5s après le chargement
-    setTimeout(() => {
-        popup.classList.remove("popup-hidden");
-    }, 1500);
+// SECTION PROMO -10%
+const promoForm = document.getElementById("promo-form");
 
-    // Fermeture du pop-up
-    closeBtn.addEventListener("click", () => {
-        popup.classList.add("popup-hidden");
-    });
-
-    // Validation du formulaire
-    form.addEventListener("submit", (e) => {
+if (promoForm) {
+    promoForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const email = document.getElementById("popup-email").value;
+        const email = document.getElementById("promo-email").value;
+        const success = document.getElementById("promo-success");
 
-        alert("Merci ! Votre code promo de -10% vient d'être envoyé à : " + email);
+        success.textContent = "Merci ! Votre code promo -10% vient d’être envoyé à : " + email;
 
-        popup.classList.add("popup-hidden");
-
-        // Ici tu pourrais connecter un système réel d’envoi d’email (Mailchimp, Brevo, Firebase…)
+        // Tu pourras ajouter ici un vrai envoi via Mailchimp / Brevo / Formspree.
     });
-});
+}
