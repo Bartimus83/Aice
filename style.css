@@ -382,65 +382,67 @@ section {
     font-size: 0.8rem;
   }
 }
-/* SECTION PROMO */
-.promo {
-  background: linear-gradient(to right, #5BCBFF, #007ACC);
-  padding: 70px 10%;
+/* --- SECTION NOËL PREMIUM --- */
+.promo-noel {
+  background: linear-gradient(135deg, #8b0000, #b30000, #cc0000);
+  padding: 80px 10%;
   text-align: center;
   border-radius: 20px;
   margin: 80px auto;
-  color: white;
+  max-width: 1100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  border: 2px solid gold;
+  background-image:
+     radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent),
+     radial-gradient(circle at bottom right, rgba(255,215,0,0.2), transparent);
 }
 
-.promo-box {
-  max-width: 650px;
-  margin: auto;
+.promo-noel h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff8ec;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
 }
 
-.promo h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
+.promo-noel .subtitle,
+.promo-noel .subtitle2 {
+  font-size: 1.3rem;
+  color: #ffe8c6;
+  margin: 8px 0;
 }
 
-.promo p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-#promo-form {
+.promo-form {
+  margin-top: 30px;
   display: flex;
-  gap: 12px;
   justify-content: center;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-#promo-email {
-  padding: 14px;
-  border-radius: 10px;
+.promo-form input[type="email"] {
+  padding: 14px 18px;
+  border-radius: 30px;
   border: none;
-  width: 260px;
+  width: 320px;
   font-size: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-#promo-form button {
-  padding: 14px 25px;
-  background: white;
-  color: #007ACC;
+.promo-form button {
+  padding: 14px 28px;
+  border-radius: 30px;
   border: none;
-  border-radius: 12px;
+  background: gold;
+  color: #8b0000;
+  font-weight: 700;
   font-size: 1.1rem;
-  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(255,215,0,0.5);
 }
 
-#promo-form button:hover {
-  background: #e4f4ff;
-}
-
-.promo-success {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #d9ffea;
+.promo-form button:hover {
+  background: #ffe07a;
+  transform: translateY(-2px);
 }
