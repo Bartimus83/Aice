@@ -382,119 +382,69 @@ section {
     font-size: 0.8rem;
   }
 }
-/* --- SECTION NOËL PREMIUM --- */
-.promo-noel {
-  background: linear-gradient(135deg, #8b0000, #b30000, #cc0000);
-  padding: 80px 10%;
-  text-align: center;
-  border-radius: 20px;
-  margin: 80px auto;
-  max-width: 1100px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  border: 2px solid gold;
-  background-image:
-     radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent),
-     radial-gradient(circle at bottom right, rgba(255,215,0,0.2), transparent);
+/* 🎄 SECTION NOËL */
+.noel-offer {
+    background: url('https://i.imgur.com/3XyGJ9h.png'), 
+                linear-gradient(to bottom, #ffffff, #e6f3ff);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 10%;
+    border-radius: 20px;
+    margin: 60px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.promo-noel h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff8ec;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+.noel-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
 }
 
-.promo-noel .subtitle,
-.promo-noel .subtitle2 {
-  font-size: 1.3rem;
-  color: #ffe8c6;
-  margin: 8px 0;
+.noel-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-.promo-form {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+.noel-card h2 span {
+    color: #007ACC;
+    font-weight: 700;
 }
 
-.promo-form input[type="email"] {
-  padding: 14px 18px;
-  border-radius: 30px;
-  border: none;
-  width: 320px;
-  font-size: 1rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+.noel-card .subtitle {
+    margin-top: -5px;
+    font-size: 1.1rem;
+    opacity: 0.8;
 }
 
-.promo-form button {
-  padding: 14px 28px;
-  border-radius: 30px;
-  border: none;
-  background: gold;
-  color: #8b0000;
-  font-weight: 700;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 4px 12px rgba(255,215,0,0.5);
+.noel-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.promo-form button:hover {
-  background: #ffe07a;
-  transform: translateY(-2px);
-}
-.promo-noel {
-  background: url("https://images.unsplash.com/photo-1607799279861-4dd421887fb3") center/cover no-repeat;
-  padding: 100px 10%;
-  margin: 80px auto;
-  border-radius: 30px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+.noel-form input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-/* Overlay sombre */
-.promo-noel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(3px);
+.noel-form button {
+    padding: 14px;
+    background: #007ACC;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.promo-content {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-size: 1.4rem;
+.noel-form button:hover {
+    background: #5BCBFF;
 }
 
-.promo-content input {
-  margin-top: 20px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: none;
-  width: 60%;
-  max-width: 350px;
-  font-size: 1rem;
-}
-
-.promo-content button {
-  margin-top: 15px;
-  padding: 12px 30px;
-  border-radius: 25px;
-  background: #00A8FF;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.promo-content button:hover {
-  background: #34D0FF;
-}
