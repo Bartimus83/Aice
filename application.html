@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIce App — Smart Food, Smart Life</title>
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Script navbar (identique index.html) -->
+    <script src="script.js" defer></script>
 
     <style>
         .hero-app {
@@ -36,7 +41,10 @@
             margin-top: 25px;
             transition: 0.3s;
         }
-        .cta-app:hover { background: #5BCBFF; color: white; }
+        .cta-app:hover {
+            background: #5BCBFF;
+            color: white;
+        }
 
         section { padding: 80px 8%; }
         .section-title { text-align: center; margin-bottom: 50px; }
@@ -48,7 +56,7 @@
             align-items: center;
         }
         .app-card {
-            background: #ffffff;
+            background: #fff;
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -59,7 +67,7 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
-        @media (max-width: 900px) {
+        @media(max-width: 900px){
             .app-grid { grid-template-columns: 1fr; }
             .hero-app h1 { font-size: 2.5rem; }
         }
@@ -68,103 +76,154 @@
 
 <body>
 
+<!-- ⭐⭐⭐ NAVBAR IDENTIQUE À index.html (copiée à l’identique) ⭐⭐⭐ -->
 <header class="navbar">
-  <a href="index.html" class="logo"><img src="favicon.svg" alt="Logo AIce" height="42"></a>
-  <nav>
-      <a href="index.html">Accueil</a>
-      <a href="aicebox.html">AIceBox</a>
-      <a href="aiwave.html">AIWave</a>
-      <a href="application.html" class="active">Application</a>
-      <a href="marque.html">Marque</a>
-      <a href="contact.html">Contact</a>
-  </nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="favicon.svg" alt="Symbole AIce" />
+      </a>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="aicebox.html">AIceBox ▾</a>
+          <ul class="submenu">
+            <li><a href="aicebox.html#boreas">Boreas</a></li>
+            <li><a href="aicebox.html#sedna">Sedna</a></li>
+            <li><a href="aicebox.html#skadi">Skadi</a></li>
+            <li><a href="aicebox.html#beira">Beira</a></li>
+            <li><a href="aicebox.html#khione">Khione</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="aiwave.html">AIWave ▾</a>
+          <ul class="submenu">
+            <li><a href="aiwave.html#aicehydro">AiceHydro</a></li>
+            <li><a href="aiwave.html#aiceconnect">AiceConnect</a></li>
+            <li><a href="aiwave.html#aicefreeze">AiceFreeze</a></li>
+          </ul>
+        </li>
+
+        <li><a href="application.html" class="active">Application</a></li>
+        <li><a href="marque.html">Marque</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero-app">
     <h1>AIce App'</h1>
     <p>L’application qui transforme votre cuisine en un écosystème intelligent, intuitif et durable.</p>
     <a class="cta-app" href="#">Disponible bientôt</a>
 </section>
 
+<!-- PRESENTATION -->
 <section>
     <h2 class="section-title">Une expérience intelligente</h2>
+
     <div class="app-grid">
         <div class="app-card">
             <h3>Technologie douce</h3>
-            <p>Une interface élégante et intuitive, conçue pour simplifier votre quotidien sans jamais l'interrompre.</p>
+            <p>Interface élégante et intuitive, conçue pour simplifier votre quotidien.</p>
+
             <h3>Anti-gaspillage</h3>
-            <p>Alertes d’expiration, inventaire intelligent, recommandations sur mesure.</p>
+            <p>Alertes d’expiration, inventaire intelligent, recommandations IA.</p>
+
             <h3>Écosystème AIWave</h3>
-            <p>Connectez AIceBox, AIceHydro, AIceWeigh, AIceFreeze, AIceConnect… pour une cuisine unifiée.</p>
+            <p>Connexion avec AIceBox, AIceHydro, AIceFreeze, AIceConnect…</p>
         </div>
+
         <img class="app-screen" src="AiceApp Apple Store.png" alt="Aice App Store">
     </div>
 </section>
 
+<!-- ACCUEIL -->
 <section>
     <h2 class="section-title">Accueil</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="Acceuil.png" alt="Accueil AIceApp">
+
         <div class="app-card">
             <h3>Toutes vos fonctions en un clic</h3>
-            <p>Inventaire, Tableau de bord, Écosystème, Yuka, AIceChef… tout est accessible immédiatement.</p>
+            <p>Inventaire, Tableau de bord, Écosystème, Yuka, AIceChef… accessibles immédiatement.</p>
         </div>
     </div>
 </section>
 
+<!-- TABLEAU DE BORD -->
 <section>
     <h2 class="section-title">Tableau de bord</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="tableau de bord.png" alt="Dashboard AIce">
+
         <div class="app-card">
-            <h3>Une vue globale</h3>
-            <p>Statistiques, nutrition, péremption, Yuka… votre frigo devient votre coach alimentaire.</p>
+            <h3>Vue globale intelligente</h3>
+            <p>Stats nutrition, péremption, score Yuka, tendances alimentaires.</p>
         </div>
     </div>
 </section>
 
+<!-- INVENTAIRE -->
 <section>
     <h2 class="section-title">Inventaire intelligent</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="Inventaire.png" alt="Inventaire AIce">
+
         <div class="app-card">
-            <h3>Ne perdez plus jamais un aliment</h3>
-            <p>IA de reconnaissance, QR code, alertes automatiques, suggestions anti-gaspillage.</p>
+            <h3>Ne perdez plus aucun aliment</h3>
+            <p>IA de reconnaissance, QR codes, alertes automatiques.</p>
         </div>
     </div>
 </section>
 
+<!-- ECOSYSTEME -->
 <section>
     <h2 class="section-title">Écosystème AIWave</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="Écosystème.png" alt="Ecosystème AIWave">
+
         <div class="app-card">
-            <h3>Vos appareils, enfin connectés</h3>
-            <p>Synchronisation en temps réel entre AIceBox, AIceHydro, AIceWeigh, AIceFreeze et AIceConnect.</p>
+            <h3>Vos appareils synchronisés</h3>
+            <p>Connexion instantanée entre AIceBox, AIceHydro, AIceFreeze, AIceConnect.</p>
         </div>
     </div>
 </section>
 
+<!-- AICE CHEF -->
 <section>
     <h2 class="section-title">AIceChef</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="AiceChef.png" alt="AiceChef">
+
         <div class="app-card">
             <h3>Votre chef personnel</h3>
-            <p>Recettes intelligentes, tutoriels étape par étape, gestion des ingrédients, mode batch cooking.</p>
+            <p>Recettes IA, tutoriels pas-à-pas, batch cooking intelligent.</p>
         </div>
     </div>
 </section>
 
+<!-- PROFIL -->
 <section>
     <h2 class="section-title">Profil & Réglages</h2>
+
     <div class="app-grid">
         <img class="app-screen" src="Profil.png" alt="Profil AIceApp">
+
         <div class="app-card">
             <h3>100% personnalisé</h3>
-            <p>Régimes, allergies, modes d’affichage, notifications, connexions appareils… tout est modulable.</p>
+            <p>Allergies, préférences alimentaires, notifications, appareils connectés…</p>
         </div>
     </div>
 </section>
